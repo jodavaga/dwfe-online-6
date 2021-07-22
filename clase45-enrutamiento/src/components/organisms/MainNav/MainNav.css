@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 800px;
+  list-style: none;
+}
+
+a:visited {
+  color: white;
+}
