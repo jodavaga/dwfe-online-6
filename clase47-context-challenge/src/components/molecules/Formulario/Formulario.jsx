@@ -6,7 +6,6 @@ import "../../../styles.css";
 function Formulario() {
   // Context
   const {libros, setLibros} = useContext(AppContext);
-  console.log("🚀 ~ file: Formulario.jsx ~ line 9 ~ Formulario ~ libros", libros);
 
   // estado del formulario
   const [nombre, setNombre] = useState('');
