@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../../contexts/DataContext";
 
 export const Kappa = () => {
-  return <div className="componente nivel5">KAPPA</div>;
+  const { kappa } = useContext(DataContext);
+
+  return <div className="componente nivel5">KAPPA - {kappa}</div>;
 };

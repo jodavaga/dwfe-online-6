@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../../contexts/DataContext";
 
 import "../../index.css";
 
 export const Beta = () => {
-  return <div className="componente nivel2">BETA</div>;
+  const { beta } = useContext(DataContext);
+
+  return <div className="componente nivel2">BETA - {beta}</div>;
 };
