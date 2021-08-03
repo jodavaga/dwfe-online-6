@@ -12,13 +12,13 @@ import "./index.css";
 
 function App() {
   return (
-    <DataProvider>
-      <div className="App nivel1">
+    <div className="App nivel1">
+      <DataProvider>
         <Alpha />
         <Beta />
         <Gamma />
-      </div>
-    </DataProvider>
+      </DataProvider>
+    </div>
   );
 }
 
