@@ -9,7 +9,6 @@ function Formulario() {
   const objetoRetorno = useFormulario();
   // Destructuro el objeto de retorno del HOOK
   const {valorInput, funcionSubmit, setInputText, componenteTemporal} = objetoRetorno;
- 
 
   return (
     <div className="flex column">
