@@ -1,31 +1,13 @@
-import React, {useContext} from 'react';
+import React from 'react';
 
-// Contexto
-import {AppContext} from '../../../contexts/ContextProvider'
+import useListaLibros from './hooks/useListaLibros';
+
+
 
 function ListaLibros({ title, readCondition }) {
-  // Consume context
-  const { posts, setPosts } = useContext(AppContext);
 
-  const handleChange = (event) => {
-    event.persist();
-    const { id, checked } = event.target;
-    
-    // Update 'leido' prop to checked posts
-    const modifiedLibros = posts.map((libro) => {
-      if (libro.id === Number(id)) {
-        return {
-          ...libro,
-          leido: checked,
-        };
-      }
-      return libro;
-    });
-
-    // update contenxt data
-    setPosts(modifiedLibros);
-  };
-
+  // const {posts, handleChange} = useListaLibros();
+  const [posts, handleChange] = useListaLibros();
 
   return (
     <div className={`parent ${readCondition ? "no-leidos" : "leidos"}`}>
